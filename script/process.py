@@ -22,11 +22,11 @@ im.save('../processed.jpeg', 'JPEG')
 # /execute as @a at @s run summon minecraft:tnt ~ ~-90 ~ {Fuse:40,Motion[x,1.0,y]}
 print(len(coords))
 # f.write("execute as @a at @s run summon minecraft:tnt ~ ~-90 ~ {Fuse:40, Motion:[%s,1.0,%s]}" % coords[0])
-for i in range(8):
+for i in range(16):
     f = open("../tntPicture/data/picture/functions/picture%s.mcfunction" % (i), "w")
     for j in range(56):
-        if(j == 55 and (i == 7 or i == 6)):
+        if(j == 55 and (i >= 12)):
             break
-        if(j*128+i*16 >= 7136):
+        if(j*128+i*8 >= 7136):
             print("%s,%s" % (j,i))
-        f.write("execute as @a at @s run summon minecraft:tnt ~ ~-90 ~ {Fuse:40, Motion:[%s,1.0,%s]}\n" % coords[j*128+i*16])
+        f.write("execute as @a at @s run summon minecraft:tnt ~ ~-90 ~ {Fuse:40, Motion:[%s,1.0,%s]}\n" % coords[j*128+i*8])
