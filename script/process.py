@@ -26,4 +26,4 @@ for i in range(8):
     for j in range(56):
         if(j == 55 and (i >= 12)):
             break
-        f.write("execute as @a at @s run summon minecraft:tnt ~ ~-90 ~ {Fuse:40, Motion:[%s,1.0,%s]}\n" % coords[j*128+i*8])
+        f.write("execute as @a at @s run summon minecraft:tnt ~ ~2 ~ {Fuse:40, Motion:[%s,1.0,%s]}\n" % coords[j*128+i*8])
