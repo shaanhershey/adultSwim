@@ -4,8 +4,8 @@ im = Image.open("../logo.jpeg")
 pix = im.load()
 width, length = im.size
 
-center_x = 100
-center_y = 100
+center_x = width/2
+center_y = length/2
 
 coords = []
 
