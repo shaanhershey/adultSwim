@@ -1,6 +1,13 @@
 from PIL import Image
+import sys
 
-im = Image.open("../logo.jpeg")
+file = ""
+if(len(sys.argv) == 2):
+    file = sys.argv[1]
+else :
+    file = "../logo.jpeg"
+
+im = Image.open(file)
 pix = im.load()
 width, length = im.size
 
